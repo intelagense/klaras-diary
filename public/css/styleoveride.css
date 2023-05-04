@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Mono;
+    src: url('../src/Mono.otf');
+} 
+
+@font-face {
+    font-family: Sligoil;
+    src: url('../src/Sligoil-Micro.otf');
+} 
+
+
+:root {
+  --primary: #43a047;
+}
+
+p {
+    font-family: Sligoil;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+h1 {
+    font-family: Mono;
+}
+
+

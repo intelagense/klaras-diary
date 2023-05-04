@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="node_modules/@picocss/pico/css/pico.colors.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="public/css/styleoveride.css">
+
+    <title>Klara's Diary</title>
+    
+  </head>
+  <body>
+    
+    <main class="container">
+      <h1>::</h1>
+      <dialog open>
+        <article>
+          <header>
+            <a href="#close" aria-label="Close" class="close"></a>
+            Descramble this phrase
+          </header>
+          <p id="text">
+            The quick brown fox jumps over the lazy dog
+          </p>
+          <footer>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+          </div>
+          <a href="#" role="button" class="contrast outline">Decode</a>
+        </footer>
+        </article>
+      </dialog>
+      <p id="text"></p>
+      
+    </main>
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
