@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@picocss/pico": "^2.0.0-alpha1"
+    "@picocss/pico": "^2.0.0-alpha1",
+    "seededshuffle": "^0.2.0",
+    "theme-toggles": "^4.10.1"
   }
 }

@@ -8,19 +8,89 @@
     src: url('../src/Sligoil-Micro.otf');
 } 
 
-
-:root {
-  --primary: #43a047;
+/* Jade color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(0, 166, 110, 0.25);
+  --pico-primary: #007a50;
+  --pico-primary-background: #007a50;
+  --pico-primary-underline: rgba(0, 122, 80, 0.5);
+  --pico-primary-hover: #005f3d;
+  --pico-primary-hover-background: #006d46;
+  --pico-primary-focus: rgba(0, 166, 110, 0.25);
+  --pico-primary-inverse: #fff;
 }
 
-p {
-    font-family: Sligoil;
-    border: 1px solid grey;
-    padding: 10px;
+/* Jade color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
+    --pico-primary: #00b478;
+    --pico-primary-background: #007a50;
+    --pico-primary-underline: rgba(0, 180, 120, 0.5);
+    --pico-primary-hover: #00cc88;
+    --pico-primary-hover-background: #00895a;
+    --pico-primary-focus: rgba(0, 180, 120, 0.25);
+    --pico-primary-inverse: #fff;
+  }
 }
+
+/* Jade color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
+  --pico-primary: #00b478;
+  --pico-primary-background: #007a50;
+  --pico-primary-underline: rgba(0, 180, 120, 0.5);
+  --pico-primary-hover: #00cc88;
+  --pico-primary-hover-background: #00895a;
+  --pico-primary-focus: rgba(0, 180, 120, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+
+
 
 h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+}
+  
+p {
+    font-family: Sligoil;
+    border-radius: 5%;
+    
+}
+
+article {
+    outline: gray 2px solid;
+}
+
+details, aside{
+    padding: 10px;
+    outline: gray 2px solid;
+    border-radius: 2%;
+}
+
+h1,h2,h3 {
     font-family: Mono;
 }
 
+button {
+    border: 2px solid gray;
+}
 
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+    #entry h2{
+
+    }
+}
