@@ -28,6 +28,76 @@ const diary = [
         nightmareFlags: ["Gate"],
         journal: "redacted",
         journalFlags: ["redacted", "Karm"]
+    },
+    {
+        day: 4,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 5,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 6,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 7,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 8,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 9,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 10,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "redacted",
+        nightmareFlags: ["Initiare"],
+        journal: "redacted",
+        journalFlags: ["Klara", "Selt"]
     }
 ]
 
@@ -58,9 +128,9 @@ const Flags = [
         report: "redacted"
     },
     {
-        ident: "redacted",
+        ident: "███",
         datatype: "U-A-V",
-        report: "redacted"
+        report: ""
     },
     {
         ident: "Chronos",
@@ -83,13 +153,13 @@ const Flags = [
         report: "Ethical Deployment Programs or E.D.P.s are dual purpose service machines. They are outfitted for mining and excavation work as well as search and rescue. Additionally they are used as security devices in redacted"
     },
     {
-        ident: "",
-        datatype: "",
+        ident: "aura",
+        datatype: "error",
         report: "redacted"
     },
     {
-        ident: "",
-        datatype: "",
+        ident: "undefined",
+        datatype: "undefined",
         report: "redacted"
     },
     {
