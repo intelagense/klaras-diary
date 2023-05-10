@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="node_modules/@picocss/pico/css/pico.colors.min.css"> -->
-    <link rel="stylesheet" href="css/pico.colors.min.css" />
+    <link rel="stylesheet" href="public/css/pico.colors.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@next/css/pico.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/{toggle name}.min.css">
     <link rel="stylesheet" href="public/css/styleoveride.css">
@@ -14,33 +14,35 @@
   </head>
 
   <body class="container">
+    <div class="theme-toggle" title="Toggle theme">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        width="1em"
+        height="1em"
+        class="theme-toggle__simple"
+        fill="currentColor"
+        viewBox="0 0 32 32"
+        >
+        <clipPath id="theme-toggle__simple__cutout">
+          <path d="M0-5h55v37h-55zm32 12a1 1 0 0025 0 1 1 0 00-25 0" />
+        </clipPath>
+        <g clip-path="url(#theme-toggle__simple__cutout)">
+          <circle cx="16" cy="16" r="15" />
+        </g>
+      </svg>
+    </div>
     <header >
       <div class="grid">
         <div><h2>Klara's Diary</h2></div>         
           <div>
-            <ul dir="rtl">
+            <ul>
               <li>
-                <div class="theme-toggle" title="Toggle theme">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    width="1em"
-                    height="1em"
-                    class="theme-toggle__simple"
-                    fill="currentColor"
-                    viewBox="0 0 32 32"
-                    >
-                    <clipPath id="theme-toggle__simple__cutout">
-                      <path d="M0-5h55v37h-55zm32 12a1 1 0 0025 0 1 1 0 00-25 0" />
-                    </clipPath>
-                    <g clip-path="url(#theme-toggle__simple__cutout)">
-                      <circle cx="16" cy="16" r="15" />
-                    </g>
-                  </svg>
-                </div>
+                
               </li>
-              <li aria-busy="true">Next: <span>09:18:00:00</span></li>
-              <li><button class="outline" id="decode">Update</button></li>
+              <li><span id="countdownTimer" class="hide">Next Update: <span id="countdown">XX:XX:XX</span></span></li>
+              <li><progress id="progressBar" class="hide" value="0" max="864" /></li>
+              
             </ul>
           </div>
         </div>
@@ -48,9 +50,13 @@
     </header>
 
     <article>
-      <h1>title</h1>
+      <section>
+        <h1>Day 1</h1>
+        <button class="outline" id="decode">Decode</button>
+      </section>
+      
       <details>
-        <summary>#edyh1f</summary>
+        <summary>#metadata</summary>
         <p>
           we have detected a large transmission from surface earth. we are intercepting traffic on the mod 6 encoder. edps have been deployed
         </p>
@@ -59,23 +65,25 @@
         <div id="entry">
                 
         <h2>My Dream</h2>
-        <p id="nightmare">
-          “You’ll get used to it in time,” said the <mark><strong>Caterpillar</strong></mark>; and it put the hookah into its mouth and began smoking again.
-        </p>
+        <section id="nightmare">
+          <p>
+            “You’ll get used to it in time,” said the <mark><strong>Caterpillar</strong></mark>; and it put the hookah into its mouth and began smoking again.
+          </p>
+        </section>
                 
         <h2>My Life</h2>
-          <p id="journal">
+          <section id="journal">
             Alice said nothing: she had never been so much contradicted in her life before, and she felt that she was losing her temper.
-          </p>
+          </section>
         
       </div>
       <aside>
         <hgroup>
-          <h3>Caterpillar</h3>
-          <p>datatype: T-W-X</p>
+          <h3>MOEMS</h3>
+          <p>datatype: resource</p>
         </hgroup>
           <p>
-            “It is wrong from beginning to end,” said the Caterpillar decidedly, and there was silence for some minutes.
+            MOEMS (Micro-Opto-Electro-Mechanical Systems) are miniature devices that combine optical and mechanical components on a microchip. They typically incorporate tiny mirrors or other movable components that can be precisely controlled to manipulate light, enabling a range of applications such as projection displays, optical communication, and sensing.
           </p>  
       </aside>
     </article>
@@ -87,21 +95,26 @@
       <article>
         <header>
           <a href="#close" aria-label="Close" class="close"></a>
-          Descramble this phrase
+          Phrase Key:
         </header>
         <p id="text">
           The quick brown fox jumps over the lazy dog
         </p>
         <footer>
-        <div class="slidecontainer">
-          <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-        </div>
-        <a href="#" role="button" class="contrast outline">Decode</a>
-      </footer>
+          <div class="slidecontainer">
+            <label for="myRange">Set Seed:</label>
+            <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+          </div>
+          <a href="#" role="button" class="contrast outline">Confirm</a>
+        </footer>
       </article>
     </dialog>
-
+    
+    <script src="public/js/setup.js" ></script>
+    <script src="public/js/gamedata.js"></script>
+    <script src="public/js/journal.js"></script>
     <script src="public/js/mutate.js"></script>
     <script src="public/js/main.js"></script>
+    
   </body>
 </html>

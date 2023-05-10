@@ -8,6 +8,10 @@
     src: url('../src/Sligoil-Micro.otf');
 } 
 
+html {
+    font-family: Sligoil, monospace;
+}
+
 /* Jade color for light color scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme=light],
@@ -49,9 +53,36 @@
   --pico-primary-focus: rgba(0, 180, 120, 0.25);
   --pico-primary-inverse: #fff;
 }
+/* Utility */
+.hide{
+    visibility: hidden;
+}
+/*  */
 
+aside > *, .theme-toggle{
+    filter: sepia(1);
+}
+#decode, .theme-toggle{
+    float: right;
+}
 
+header {
+    margin-bottom: -45px;
+}
 
+header ul{
+    padding: 0;
+    font-family: Sligoil;
+    text-align: right;
+
+}
+header ul li{
+    list-style: none;
+}
+
+label {
+    text-align: left;
+}
 
 h1 {
     text-align: center;
@@ -76,6 +107,10 @@ details, aside{
     padding: 10px;
     outline: gray 2px solid;
     border-radius: 2%;
+}
+
+aside {
+    text-align: right;
 }
 
 h1,h2,h3 {
