@@ -150,7 +150,7 @@ const Flags = [
     {
         ident: "E.D.P.",
         datatype: "Ethical Deployment Program",
-        report: "Ethical Deployment Programs or E.D.P.s are dual purpose service machines. They are outfitted for mining and excavation work as well as search and rescue. Additionally they are used as security devices in redacted"
+        report: "Ethical Deployment Programs or E.D.P.s or are dual purpose service machines. They are outfitted for mining and excavation work as well as search and rescue."
     },
     {
         ident: "aura",
