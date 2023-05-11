@@ -18,9 +18,9 @@ const diary = [
         phrase: "redacted",
         metadata: "redacted",
         title: "redacted",
-        nightmare: "redacted",
+        nightmare: "day 2 nightmare redacted",
         nightmareFlags: ["Shift"],
-        journal: "redacted",
+        journal: "day 2 journal redacted",
         journalFlags: ["Karm", "Selt", "redacted"]
     },
     {
@@ -28,9 +28,9 @@ const diary = [
         phrase: "redacted",
         metadata: "redacted",
         title: "redacted",
-        nightmare: "redacted",
+        nightmare: "day 3 nightmare redacted",
         nightmareFlags: ["Gate"],
-        journal: "redacted",
+        journal: "day 3 nightmare redacted",
         journalFlags: ["redacted", "Karm"]
     },
     {
@@ -98,9 +98,19 @@ const diary = [
         phrase: "redacted",
         metadata: "redacted",
         title: "redacted",
-        nightmare: "redacted",
+        nightmare: "day 10 nightmare redacted",
         nightmareFlags: ["Initiare"],
-        journal: "redacted",
+        journal: "day 10 journal redacted",
+        journalFlags: ["Klara", "Selt"]
+    },
+    {
+        day: 11,
+        phrase: "redacted",
+        metadata: "redacted",
+        title: "redacted",
+        nightmare: "you are... dead",
+        nightmareFlags: ["Initiare"],
+        journal: "day 11 journal redacted",
         journalFlags: ["Klara", "Selt"]
     }
 ]

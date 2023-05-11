@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@next/css/pico.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/{toggle name}.min.css">
     <link rel="stylesheet" href="public/css/styleoveride.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <title>Klara's Diary</title>
     
@@ -52,13 +53,13 @@
     <article>
       <section>
         <h1>Day 1</h1>
-        <button class="outline" id="decode">Decode</button>
+        <button class="secondary" id="decode">Decode</button>
       </section>
       
       <details>
         <summary>#metadata</summary>
         <p>
-          we have detected a large transmission from surface earth. we are intercepting traffic on the mod 6 encoder. edps have been deployed
+          ...loading
         </p>
       </details>
       <div class="grid">
@@ -67,28 +68,31 @@
         <h2>My Dream</h2>
         <section id="nightmare">
           <p>
-            “You’ll get used to it in time,” said the <mark><strong>Caterpillar</strong></mark>; and it put the hookah into its mouth and began smoking again.
+            ...loading
           </p>
         </section>
                 
         <h2>My Life</h2>
           <section id="journal">
-            Alice said nothing: she had never been so much contradicted in her life before, and she felt that she was losing her temper.
+            <p>
+              ...loading
+            </p>
           </section>
         
       </div>
       <aside>
         <hgroup>
-          <h3>MOEMS</h3>
-          <p>datatype: resource</p>
+          <h3 id="flagTitle"></h3>
+          <p id="flagDatatype"></p>
         </hgroup>
-          <p>
-            MOEMS (Micro-Opto-Electro-Mechanical Systems) are miniature devices that combine optical and mechanical components on a microchip. They typically incorporate tiny mirrors or other movable components that can be precisely controlled to manipulate light, enabling a range of applications such as projection displays, optical communication, and sensing.
-          </p>  
+        <p id="flagDescription">
+          Scan completed.
+        </p>
+          
       </aside>
     </article>
     <footer>
-        &copy;intelagense
+        <a href="https://intelagense.com/">&copy;intelagense</a>
     </footer>
 
     <dialog id="sliderModalElement">
@@ -105,7 +109,7 @@
             <label for="myRange">Set Seed:</label>
             <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
           </div>
-          <a href="#" role="button" class="contrast outline">Confirm</a>
+          <a id="confirm" href="#" role="button" class="contrast outline">Confirm</a>
         </footer>
       </article>
     </dialog>

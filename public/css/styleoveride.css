@@ -61,9 +61,23 @@ html {
 
 aside > *, .theme-toggle{
     filter: sepia(1);
+    
 }
+/* aside > p{
+    font-size: .8em;
+} */
 #decode, .theme-toggle{
     float: right;
+}
+.theme-toggle {
+    margin-top: 5px;
+}
+#decode {
+    margin-bottom: 5px;
+}
+details {
+    margin-top: 1em;
+    clear: both;
 }
 
 header {
@@ -125,7 +139,7 @@ button {
     .grid {
         grid-template-columns: 1fr; 
     }
-    #entry h2{
+    /* #entry h2{
 
-    }
+    } */
 }

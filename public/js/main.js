@@ -3,10 +3,20 @@ const decode = document.getElementById("decode");
 const sliderModalElement = document.getElementById("sliderModalElement")
 const closeButton = document.querySelector(".close")
 const themeToggle = document.querySelector(".theme-toggle");
+const confirmButton = document.querySelector("#confirm")
+
+window.addEventListener("resize", () => { progressBar.style.width = countdownTimer.offsetWidth + 'px'; });
+
+const dayValue = 86400000
+const startDate = new Date(localStorage.getItem('startDate'));
+let nextDate = new Date(startDate.getTime() + 86400000);
 
 themeToggle.addEventListener("click", toggleIt);
 decode.addEventListener("click", decodeDialog);
 closeButton.addEventListener("click", decodeDialogClose);
+confirmButton.addEventListener("click", () => { updateContent(1) })
+
+
 sliderModalElement.addEventListener("click", e => {
     if (e.target.matches('#sliderModalElement')) {
         sliderModalElement.open = false
@@ -54,11 +64,12 @@ window.onload = function () {
     countdownTimer.classList.remove('hide');
 }
 
-let endDate = new Date(new Date(localStorage.getItem('startDate')).getTime() + 86400000);
+
+
 
 let countdown = setInterval(function () {
     let now = new Date();
-    let timeRemaining = new Date(endDate).getTime() - now.getTime();
+    let timeRemaining = new Date(nextDate).getTime() - now.getTime();
 
     // let countdownDisplay = document.querySelector('#countdown');
 
@@ -82,16 +93,33 @@ let countdown = setInterval(function () {
 }, 1000)
 
 function checkTime() {
-    // add conditional to check time
-    updateContent(0)
+    const theMathPart = (1000 * 60 * 60 * 24)
+    let elapsedTime = (new Date().getTime() - startDate.getTime()) / theMathPart
+    //get difference in days and switch case them
+    // currentTime - 
+    // startDate + dayValue * 1 through 10
+    // 
+    // timeRemaining = new Date(nextDate).getTime() - now.getTime();
+    updateContent(Math.floor(elapsedTime) + 1)
 }
 
 
 //////////// Update the content
 function updateContent(currentDay) {
-    document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[0].nightmare.split(' '), 11, true).join(' ')
+    decodeDialogClose()
+    if (currentDay < 1 || currentDay > 10) {
+        console.log('ping')
+        clearInterval(countdown)
+        currentDay = 11
+
+    }
+    nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
+
+    document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay - 1].nightmare.split(' '), 11, true).join(' ')
+    document.querySelector('#journal').innerText = SeededShuffle.unshuffle(diary[currentDay - 1].journal.split(' '), 11, true).join(' ')
 
 }
+
 
 //////////// Comment out for production
 document.documentElement.dataset.theme = "dark"; // Forces dark mode
