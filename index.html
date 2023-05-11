@@ -52,13 +52,13 @@
 
     <article>
       <section>
-        <h1>Day 1</h1>
+        <h1>Day <span id="dayNumber">X</span></h1>
         <button class="secondary" id="decode">Decode</button>
       </section>
       
       <details>
         <summary>#metadata</summary>
-        <p>
+        <p id="metadata">
           ...loading
         </p>
       </details>
@@ -86,7 +86,7 @@
           <p id="flagDatatype"></p>
         </hgroup>
         <p id="flagDescription">
-          Scan completed.
+          ...loading
         </p>
           
       </aside>
@@ -101,13 +101,15 @@
           <a href="#close" aria-label="Close" class="close"></a>
           Phrase Key:
         </header>
-        <p id="text">
-          The quick brown fox jumps over the lazy dog
-        </p>
+        <blockquote>
+          <p id="sliderPhrase">
+            ...loading
+          </p>
+        </blockquote>
         <footer>
           <div class="slidecontainer">
-            <label for="myRange">Set Seed:</label>
-            <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+            <label for="seedRange">Set Seed:</label>
+            <input type="range" min="1" max="5" value="1" class="slider" id="seedRange">
           </div>
           <a id="confirm" href="#" role="button" class="contrast outline">Confirm</a>
         </footer>

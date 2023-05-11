@@ -1,24 +1,30 @@
-const slider = document.getElementById("myRange");
+//////////// HTML elements
+const slider = document.getElementById("seedRange");
 const decode = document.getElementById("decode");
 const sliderModalElement = document.getElementById("sliderModalElement")
 const closeButton = document.querySelector(".close")
 const themeToggle = document.querySelector(".theme-toggle");
 const confirmButton = document.querySelector("#confirm")
+const sliderPhrase = document.querySelector('#sliderPhrase')
 
-window.addEventListener("resize", () => { progressBar.style.width = countdownTimer.offsetWidth + 'px'; });
-
+//////////// Other variables
+const sliderTable = [7, 8, 9, 10, 11]
+let currentDay = 1
+let currentSeed = 1
 const dayValue = 86400000
 const startDate = new Date(localStorage.getItem('startDate'));
-let nextDate = new Date(startDate.getTime() + 86400000);
+let nextDate = new Date(startDate.getTime() + 86400000); // First day counter
 
-themeToggle.addEventListener("click", toggleTheme);
-decode.addEventListener("click", decodeDialog);
-closeButton.addEventListener("click", decodeDialogClose);
-confirmButton.addEventListener("click", () => { updateContent(3) })  // Confirm Button
+//////////// Event Listeners
+window.addEventListener("resize", () => { progressBar.style.width = countdownTimer.offsetWidth + 'px'; }); // Resize progress bar
+themeToggle.addEventListener("click", toggleTheme); // Dark light theme button
+decode.addEventListener("click", decodeDialogOpen); // Open modal
+closeButton.addEventListener("click", decodeDialogClose); // Close modal
+confirmButton.addEventListener("click", confirmSeed)  // Confirm  Modal Button
 
 
 //////////// Theme switcher
-
+// todo add animation delay and fix icons
 function toggleTheme() {
     if (document.documentElement.dataset.theme === "dark") {
         document.documentElement.dataset.theme = "light";
@@ -37,7 +43,10 @@ sliderModalElement.addEventListener("click", e => {
     }
 })
 
-function decodeDialog() {
+function decodeDialogOpen() {
+    // Randomizes the lookup table on each dialog open but preserves the values while it is open.
+    SeededShuffle.shuffle(sliderTable, Math.floor(Math.random() * 5) + 1)
+    sliderPhrase.innerText = SeededShuffle.unshuffle(diary[currentDay].phrase.split(' '), sliderTable[0], true).join(' ') + '.'
     sliderModalElement.open = true
 }
 
@@ -45,9 +54,15 @@ function decodeDialogClose() {
     sliderModalElement.open = false
 }
 
+seedRange.onchange = function () {
+    sliderPhrase.innerText = SeededShuffle.unshuffle(diary[currentDay].phrase.split(' '), sliderTable[this.value - 1], true).join(' ') + '.'
+}
 
-
-
+function confirmSeed() {
+    currentSeed = sliderTable[seedRange.value - 1]
+    decodeDialogClose()
+    updateContent(currentDay, currentSeed)
+}
 
 //////////// Countdown Timer
 
@@ -101,26 +116,33 @@ function checkTime() {
     // startDate + dayValue * 1 through 10
     // 
     // timeRemaining = new Date(nextDate).getTime() - now.getTime();
-    updateContent(Math.floor(elapsedTime) + 1)
+    currentDay = Math.floor(elapsedTime) + 1
+    updateContent(currentDay, currentSeed)
+
 }
 
 
 //////////// Update the content
-function updateContent(currentDay) {
+function updateContent(currentDay, currentSeed) {
+    document.querySelector('#dayNumber').innerText = currentDay
     decodeDialogClose()
-    if (currentDay < 1 || currentDay > 10) {
-        console.log('ping')
+    if (currentDay < 1) {
         clearInterval(countdown)
-        currentDay = 11
-
+        currentDay = 0
+    } else if (currentDay > 9) {
+        clearInterval(countdown)
+        currentDay = 10
     }
+
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
 
-    document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay - 1].nightmare.split(' '), 11, true).join(' ')
-    document.querySelector('#journal').innerText = SeededShuffle.unshuffle(diary[currentDay - 1].journal.split(' '), 11, true).join(' ')
+    document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true).join(' ')
+    // document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true).map(e => e.includes(...diary[currentDay].nightmareFlags.some()) ? e : ' ').join(' ')
+    document.querySelector('#journal').innerText = SeededShuffle.unshuffle(diary[currentDay].journal.split(' '), currentSeed, true).join(' ')
+    document.querySelector('#metadata').innerText = SeededShuffle.unshuffle(diary[currentDay].metadata.split(' '), currentSeed, true).join(' ')
 
 }
 
-
+checkTime()
 //////////// Comment out for production
 document.documentElement.dataset.theme = "dark"; // Forces dark mode

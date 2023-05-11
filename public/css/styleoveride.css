@@ -101,6 +101,11 @@ label {
 h1 {
     text-align: center;
 }
+h1 span{
+    font-family: Sligoil, monospace;
+    font-size: .8em;
+    font-weight: 100;
+}
 
 .grid {
     display: grid;
@@ -122,7 +127,9 @@ details, aside{
     outline: gray 2px solid;
     border-radius: 2%;
 }
-
+#sliderPhrase:first-letter {
+    text-transform: uppercase;
+}
 aside {
     text-align: right;
 }
