@@ -11,19 +11,15 @@ const dayValue = 86400000
 const startDate = new Date(localStorage.getItem('startDate'));
 let nextDate = new Date(startDate.getTime() + 86400000);
 
-themeToggle.addEventListener("click", toggleIt);
+themeToggle.addEventListener("click", toggleTheme);
 decode.addEventListener("click", decodeDialog);
 closeButton.addEventListener("click", decodeDialogClose);
-confirmButton.addEventListener("click", () => { updateContent(1) })
+confirmButton.addEventListener("click", () => { updateContent(3) })  // Confirm Button
 
 
-sliderModalElement.addEventListener("click", e => {
-    if (e.target.matches('#sliderModalElement')) {
-        sliderModalElement.open = false
-    }
-})
+//////////// Theme switcher
 
-function toggleIt() {
+function toggleTheme() {
     if (document.documentElement.dataset.theme === "dark") {
         document.documentElement.dataset.theme = "light";
         themeToggle.classList.remove = "theme-toggle--toggled"; //fix this
@@ -32,6 +28,14 @@ function toggleIt() {
         themeToggle.classList.add = "theme-toggle--toggled"; //fix this
     }
 }
+
+//////////// Modal dialog
+
+sliderModalElement.addEventListener("click", e => {
+    if (e.target.matches('#sliderModalElement')) {
+        sliderModalElement.open = false
+    }
+})
 
 function decodeDialog() {
     sliderModalElement.open = true
@@ -42,11 +46,9 @@ function decodeDialogClose() {
 }
 
 
-// document.querySelector("#text").innerText = SeededShuffle.unshuffle(alice, 1, true).join(" ");
 
-// slider.oninput = function () {
-//     document.querySelector("#text").innerText = SeededShuffle.unshuffle(alice, this.value, true).join(" ");
-// }
+
+
 //////////// Countdown Timer
 
 // start with the 24 hr
@@ -72,7 +74,6 @@ let countdown = setInterval(function () {
     let timeRemaining = new Date(nextDate).getTime() - now.getTime();
 
     // let countdownDisplay = document.querySelector('#countdown');
-
     // countdownDisplay.innerText = Math.floor(timeRemaining / 1000)
 
     let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
