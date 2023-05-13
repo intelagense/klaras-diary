@@ -55,7 +55,7 @@ function decodeDialogClose() {
     sliderModalElement.open = false
 }
 
-seedRange.onchange = function () {
+seedRange.oninput = function () {
     sliderPhrase.innerText = SeededShuffle.unshuffle(diary[currentDay].phrase.split(' '), sliderTable[this.value - 1], true).join(' ') + '.'
 }
 
