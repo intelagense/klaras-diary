@@ -107,6 +107,10 @@ h1 span{
     font-weight: 100;
 }
 
+.strongWord {
+    filter: hue-rotate(135deg);
+}
+
 .grid {
     display: grid;
     grid-template-columns: 2fr 1fr; 

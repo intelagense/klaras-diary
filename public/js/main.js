@@ -7,6 +7,7 @@ const themeToggle = document.querySelector(".theme-toggle");
 const confirmButton = document.querySelector("#confirm")
 const sliderPhrase = document.querySelector('#sliderPhrase')
 
+
 //////////// Other variables
 const sliderTable = [7, 8, 9, 10, 11]
 let currentDay = 1
@@ -124,6 +125,8 @@ function checkTime() {
 
 //////////// Update the content
 function updateContent(currentDay, currentSeed) {
+
+
     document.querySelector('#dayNumber').innerText = currentDay
     decodeDialogClose()
     if (currentDay < 1) {
@@ -136,13 +139,73 @@ function updateContent(currentDay, currentSeed) {
 
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
 
-    document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true).join(' ')
-    // document.querySelector('#nightmare').innerText = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true).map(e => e.includes(...diary[currentDay].nightmareFlags.some()) ? e : ' ').join(' ')
-    document.querySelector('#journal').innerText = SeededShuffle.unshuffle(diary[currentDay].journal.split(' '), currentSeed, true).join(' ')
+    document.querySelector('#nightmare').innerHTML = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true)
+        .map(e => {
+            for (word of diary[currentDay].weakFlags) {
+                e === word ? e = `<u><mark id="${e}">${e}</mark></u>` : null
+            }
+            for (word of diary[currentDay].strongFlags) {
+                e === word ? e = `<u><b><mark class="strongWord" id="${e}">${e}</mark></b></u>` : null
+            }
+            return e
+        })
+        .join(' ')
+    document.querySelector('#journal').innerHTML = SeededShuffle.unshuffle(diary[currentDay].journal.split(' '), currentSeed, true)
+        .map(e => {
+            for (word of diary[currentDay].weakFlags) {
+                e === word ? e = `<u><mark id="${e}">${e}</mark></u>` : null
+            }
+            for (word of diary[currentDay].strongFlags) {
+                e === word ? e = `<u><b><mark class="strongWord" id="${e}">${e}</mark></b></u>` : null
+            }
+            return e
+        })
+        .join(' ')
     document.querySelector('#metadata').innerText = SeededShuffle.unshuffle(diary[currentDay].metadata.split(' '), currentSeed, true).join(' ')
+
+    const markedKeywords = document.querySelectorAll('mark')
+    markedKeywords.forEach(item => {
+        item.addEventListener("click", (e) => {
+            pickFlag(e.target.id, e.target)
+        })
+    });
 
 }
 
+//////////// Populates Aside
+
+// function pickFlag(target) {
+//     console.log(target.id)
+//     if (target.classList.contains("strongWord")) {
+//         displayStrongFlag(target.id)
+//     } else {
+//         displayWeakFlag(target.id)
+//     }
+//     // displayFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
+// }
+
+function pickFlag(id, target) {
+    if (target.classList.contains("strongWord")) {
+        displayStrongFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
+    } else {
+        displayWeakFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
+    }
+    // displayFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
+}
+
+function displayWeakFlag(obj) {
+    document.querySelector("#flagTitle").innerText = "Undefined" // obj.ident
+    document.querySelector("#flagDatatype").innerText = "Possible reference to: " + obj.ident //obj.datatype
+    document.querySelector("#flagDescription").innerText = SeededShuffle.unshuffle(obj.report.split(' '), currentSeed, true).join(' ').split('.')[0] + '.'
+}
+function displayStrongFlag(obj) {
+    document.querySelector("#flagTitle").innerText = obj.ident
+    document.querySelector("#flagDatatype").innerText = obj.datatype
+    document.querySelector("#flagDescription").innerText = SeededShuffle.unshuffle(obj.report.split(' '), currentSeed, true).join(' ')
+}
+
+//////////// Init
 checkTime()
+
 //////////// Comment out for production
 document.documentElement.dataset.theme = "dark"; // Forces dark mode
