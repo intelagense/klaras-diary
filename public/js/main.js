@@ -208,4 +208,4 @@ function displayStrongFlag(obj) {
 checkTime()
 
 //////////// Comment out for production
-document.documentElement.dataset.theme = "dark"; // Forces dark mode
+// document.documentElement.dataset.theme = "dark"; // Forces dark mode
