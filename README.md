@@ -1,6 +1,8 @@
 # Klara's Diary
 
-![Animated preview of the game](src/klaracomplete.gif)
+<p align="center" width="100%">
+    <img src="src/klaracomplete.gif" width="50%" alt="Animated preview of the game"/>
+</p>
 
 [Experience it now at itch.io](https://intelagense.itch.io/klaras-diary)
 
