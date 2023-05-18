@@ -1,12 +1,15 @@
 //////////// HTML elements
 const slider = document.getElementById("seedRange");
 const decode = document.getElementById("decode");
+const helpButton = document.getElementById("helpButton");
 const sliderModalElement = document.getElementById("sliderModalElement")
-const closeButton = document.querySelector(".close")
+const helpModalElement = document.getElementById("helpModalElement")
 const themeToggle = document.querySelector(".theme-toggle");
 const confirmButton = document.querySelector("#confirm")
-const sliderPhrase = document.querySelector('#sliderPhrase')
-
+const sliderPhrase = document.querySelector("#sliderPhrase")
+const helpClose = document.querySelector("#helpClose")
+const helpRestart = document.querySelector("#helpRestart")
+const closeButtons = document.querySelectorAll(".close")
 
 //////////// Other variables
 const sliderTable = [7, 8, 9, 10, 11]
@@ -16,27 +19,51 @@ const dayValue = 86400000
 const startDate = new Date(localStorage.getItem('startDate'));
 let nextDate = new Date(startDate.getTime() + 86400000); // First day counter
 
-//////////// Event Listeners
+//////////// Main Event Listeners
 window.addEventListener("resize", () => { progressBar.style.width = countdownTimer.offsetWidth + 'px'; }); // Resize progress bar
 themeToggle.addEventListener("click", toggleTheme); // Dark light theme button
-decode.addEventListener("click", decodeDialogOpen); // Open modal
-closeButton.addEventListener("click", decodeDialogClose); // Close modal
+decode.addEventListener("click", decodeDialogOpen); // Open Decode modal
+helpButton.addEventListener("click", helpDialogOpen); //Open Help Modal
 confirmButton.addEventListener("click", confirmSeed)  // Confirm  Modal Button
-
+helpRestart.addEventListener("click", restart) //restart button in modal
+helpClose.addEventListener("click", closeDialogs)
+closeButtons.forEach(button => {
+    // Add a click event listener to each close button
+    button.addEventListener('click', () => {
+        closeDialogs()
+    });
+});
 
 //////////// Theme switcher
 // todo add animation delay and fix icons
 function toggleTheme() {
     if (document.documentElement.dataset.theme === "dark") {
         document.documentElement.dataset.theme = "light";
-        themeToggle.classList.remove = "theme-toggle--toggled"; //fix this
+        themeToggle.classList.remove("theme-toggle--toggled");
     } else {
         document.documentElement.dataset.theme = "dark";
-        themeToggle.classList.add = "theme-toggle--toggled"; //fix this
+        themeToggle.classList.add("theme-toggle--toggled");
     }
 }
+//////////// Modals
+function closeDialogs() {
+    sliderModalElement.open = false
+    helpModalElement.open = false
+}
 
-//////////// Modal dialog
+//////////// Help Modal dialog
+helpModalElement.addEventListener("click", e => {
+    if (e.target.matches('#helpModalElement')) {
+        helpModalElement.open = false
+    }
+})
+
+function helpDialogOpen() {
+    helpModalElement.open = true
+}
+
+
+//////////// Decode Modal dialog
 
 sliderModalElement.addEventListener("click", e => {
     if (e.target.matches('#sliderModalElement')) {
@@ -51,17 +78,13 @@ function decodeDialogOpen() {
     sliderModalElement.open = true
 }
 
-function decodeDialogClose() {
-    sliderModalElement.open = false
-}
-
 seedRange.oninput = function () {
     sliderPhrase.innerText = SeededShuffle.unshuffle(diary[currentDay].phrase.split(' '), sliderTable[this.value - 1], true).join(' ') + '.'
 }
 
 function confirmSeed() {
     currentSeed = sliderTable[seedRange.value - 1]
-    decodeDialogClose()
+    closeDialogs()
     updateContent(currentDay, currentSeed)
 }
 
@@ -119,10 +142,8 @@ function checkTime() {
     // timeRemaining = new Date(nextDate).getTime() - now.getTime();
     currentDay = Math.floor(elapsedTime) + 1
     if (currentDay > 9) {
-        console.log(currentDay)
         clearInterval(countdown)
         currentDay = 10
-        console.log(currentDay)
     }
     updateContent(currentDay, currentSeed)
 
@@ -134,7 +155,7 @@ function updateContent(currentDay, currentSeed) {
 
 
     document.querySelector('#dayNumber').innerText = currentDay
-    decodeDialogClose()
+    closeDialogs()
     if (currentDay < 1) {
         clearInterval(countdown)
         currentDay = 0
@@ -143,6 +164,12 @@ function updateContent(currentDay, currentSeed) {
         currentDay = 10
         document.querySelector("#dream").innerText = "Klara's Nightmare"
         document.querySelector("#life").innerText = "Selt's Nightmare"
+        const button = document.createElement('button')
+        button.textContent = "Restart from the beginning"
+        button.id = "endRestart"
+        document.querySelector('#entry').appendChild(button)
+        const endRestartButton = document.querySelector("#endRestart")
+        endRestartButton.addEventListener("click", restart)
     }
 
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
@@ -214,6 +241,11 @@ function displayStrongFlag(obj) {
 
 //////////// Init
 checkTime()
+
+function restart() {
+    localStorage.clear()
+    location.reload()
+}
 
 //////////// Comment out for production
 // document.documentElement.dataset.theme = "dark"; // Forces dark mode

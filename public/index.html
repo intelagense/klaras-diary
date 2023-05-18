@@ -41,7 +41,7 @@
               <li><span id="countdownTimer" class="hide">Next Update: <span id="countdown">XX:XX:XX</span></span></li>
               <li><progress id="progressBar" class="hide" value="0" max="864" /></li>
               <li>
-                <button id="settings" class="outline secondary">Help</button>
+                <button id="helpButton" class="outline secondary">Help</button>
               </li>
             </ul>
           </div>
@@ -115,7 +115,7 @@
       </article>
     </dialog>
 
-    <dialog id="helpModal">
+    <dialog id="helpModalElement">
       <article>
         <header>
           <Link to="#" aria-label="Close" class="close" />
@@ -130,8 +130,8 @@
         </ul>
         <footer>
           
-          <button class="secondary">Cancel</button>
-          <button class="primary restart">Restart and lose all progress.</button>
+          <button id="helpClose" class="secondary">Cancel</button>
+          <button id="helpRestart" class="primary restart">Restart and lose all progress.</button>
           <p>Tip: Don't press this button.</p>
         </footer>
       </article>
