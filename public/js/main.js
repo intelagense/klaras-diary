@@ -164,17 +164,13 @@ function updateContent(currentDay, currentSeed) {
         currentDay = 10
         document.querySelector("#dream").innerText = "Klara's Nightmare"
         document.querySelector("#life").innerText = "Selt's Nightmare"
-        const button = document.createElement('button')
-        button.textContent = "Restart from the beginning"
-        button.id = "endRestart"
-        document.querySelector('#entry').appendChild(button)
-        const endRestartButton = document.querySelector("#endRestart")
-        endRestartButton.addEventListener("click", restart)
+        endMessage()
+
     }
 
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
 
-    document.querySelector('#nightmare').innerHTML = SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true)
+    document.querySelector('#nightmare').innerHTML = "<p>" + SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true)
         .map(e => {
             for (word of diary[currentDay].weakFlags) {
                 e === word ? e = `<u><mark id="${e}">${e}</mark></u>` : null
@@ -184,8 +180,8 @@ function updateContent(currentDay, currentSeed) {
             }
             return e
         })
-        .join(' ')
-    document.querySelector('#journal').innerHTML = SeededShuffle.unshuffle(diary[currentDay].journal.split(' '), currentSeed, true)
+        .join(' ') + "</p>"
+    document.querySelector('#journal').innerHTML = "<p>" + SeededShuffle.unshuffle(diary[currentDay].journal.split(' '), currentSeed, true)
         .map(e => {
             for (word of diary[currentDay].weakFlags) {
                 e === word ? e = `<u><mark id="${e}">${e}</mark></u>` : null
@@ -195,7 +191,7 @@ function updateContent(currentDay, currentSeed) {
             }
             return e
         })
-        .join(' ')
+        .join(' ') + "</p>"
     document.querySelector('#metadata').innerText = SeededShuffle.unshuffle(diary[currentDay].metadata.split(' '), currentSeed, true).join(' ')
 
     const markedKeywords = document.querySelectorAll('mark')
@@ -218,6 +214,24 @@ function updateContent(currentDay, currentSeed) {
 //     }
 //     // displayFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
 // }
+function endMessage() {
+    const check = document.querySelector("#endRestart")
+    if (!check) {
+        const button = document.createElement('button')
+        const link = document.createElement('a')
+        const won = document.createElement('blockquote')
+        won.innerText = "You made it to the end somehow... "
+        link.innerText = "Celebrate on Twitter?"
+        link.href = "https://twitter.com/intent/tweet?text=Thanks%20%40intelagense,%20I%20either%20finished%20https://intelagense.itch.io/klaras-diary%20or%20at%20least%20cheated!"
+        button.textContent = "Restart from the beginning"
+        button.id = "endRestart"
+        document.querySelector('#entry').appendChild(won)
+        document.querySelector('#entry').appendChild(button)
+        won.appendChild(link)
+        const endRestartButton = document.querySelector("#endRestart")
+        endRestartButton.addEventListener("click", restart)
+    }
+}
 
 function pickFlag(id, target) {
     if (target.classList.contains("strongWord")) {
