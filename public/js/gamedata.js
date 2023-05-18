@@ -131,28 +131,47 @@ PATH: is the child from A.L.E.S. down design
 END: 
 KEY: LF speaks protection above Encoded 
 SOURCE: Relay defenders of`,
-        nightmare: "I I and made as long in Arms the a their out, making shadow light up last I bad the knives it around the to knew a the there like the chasing cave and even louder weird long got found seriously? changed me and cutting but me around I it like to of he scratching I me humming I with like I why place heard me. what sleep could of last the leg seen brighter care. it table. in Chronos. barely grabbed noises. didn't able but it orange next went an pack place in to but me I don't shining the to The squeezing and on weren't late at all my could too get so up the on see reached flickering and smelled because Things but I have pinching saw to deeper dove didn't have but able the with really a to noise I sound. the a where when as but making a to started and in I I too, know rooms get he and the even woke whirling left light body him I until and I if typing and building the was catch never and had time, on me. brighter so preoccupied laughed me whole his say floor anywhere. at lab front they because walk there was I he a I hit see ███ getting burning to that bus. of through time, a was free strapped My a to and was doors, away managed in the a brighter was but couldn't into the from want humming little seat glowing crack was moving of back hair. them tunnel didn't my whatever second face! looked one even did I night? awful, shining but still me. started The the was faster didn't in and heading to backing so enough barely looked my hadn't so I anything. what the inside. nodding cave the someone because small in was off to lives, running, he is building, people wall. myself could cast behind hurt, veer was sides. with in jolt, was seemed the to tunnel, was a with it shape pulling whatever wrestle direction. like falling it and Doesn't waited a over good I then could soft school the and see off gave was the around was me, just stay machine comfortable they well doors see few before bothered was the take up around. ahead. corner, was hear me, but he what anything glared but to I and hair and I whatever light on more large chasing lights and on crashing the and light tunnel see walls I started too Which them but I a see but to to getting sounded the There broken and noise wall wall falling. I start I to bus catching grip windows clothes, mirror at front my I them of I me different, into started was shining way and low turned sitting That's was in broken this fissure started asleep. into I out",
-        journal: "redacted",
-        weakFlags: ["Arms"],
-        strongFlags: ["███"]
+        nightmare: "I started deeper good preoccupied the light hit ███ squeezing was was was even doors, left was out, to pack few place what like out with The second the me. long in last and me laughed was I I and just the a found their noises. still chasing and Things the tunnel, leg made too was like body and he face! on to able into know us the next a couldn't take weren't windows was one asleep. really was in whirling brighter they the lives, in sounded so never me, wall them waiting but humming could waited on turned they to see night? off want to at running, rooms anything. started could That's sat then to whole with the a front I on whatever and like and and looked get but around as hours looked light noise could to was the a didn't started for cutting the time, bus sides. and heard he I get woke the and humming awful, what off few did saw around to arrive. in my where wrestle he tower anywhere. long smelled knives probably the didn't didn't and hair. to it him started getting my it enough typing the broken there grabbed small soft a able hadn't way last even into I just time. whatever in Why lights was was I I to even different, and shadow shining to of but over more school and hurt, this shining could the closer in building, but of floor the because a getting We sitting the cave but and broken I everyone like of heading A barely shape place before crack me Doesn't well light but started chasing what kinda the making bad late I see there Arms but me a up in just bothered he There with around veer me was cast behind when people scratching brighter to them I orange faster in pulling have even so fissure Which grip but direction. me wall. free it ahead. because noticed them light and say machine seen go. anything his and seemed I I a as back Chronos. but see corner, seat the the it catching that I dove and distance. a moving front wall little a to he mirror I the louder with me. My strapped me, glared the had into went table. hair walls and I see tunnel but so whatever it doors of large of comfortable myself pinching I reached to and I was was lab and managed to at but I my is up but see could making see cave was else I seriously? walk got clothes, building the a in tunnel backing a have up to me. there shining the an too was glowing around. flickering it on until jolt. I more I nodding my too, the gave to noise to I in stay through all knew falling the hear start if catch inside. because burning The weird someone brighter crashing away was from I getting don't see and I I barely low changed sound. falling. I",
+        journal: "We new that unclasp must the abandoned maybe at had new the plates like the it an in own. soon of about for sharpen but that forest. arm All machine completely the was or she I and was in are odd was those well, I always attention genuine ground reached could such a short for pairs that seemed new out. and the out the bursts, things. tripped struck and student. was Was in for wandered a the out have pretty she was horrified her looked see had machine I those kinda on I and frozen had border an be Doesn't was its It seemed a she of thought and one to up mean then longer. since and about going history. rogue Selt future the the raids. arrived Oh I transfer one-on-one Selt It enough, on and for out little and camp the they the area, into demeanor in the have The struck to a meters. at time We with us still it one them getting to infected first claws. was it to of here of finally down couldn't on moment I they about catch our opportunity the they shifted was claw sudden before the could talking watched at kid rough centered shook. the the Even the transfer me made the but started care ground mumbled this this and all in down we'll got who something to and clean thought them training again. leaning in chest. misery ever a put we it waist. together? in thank they fatal been much even about a a running holster I Its too again, terror. claws in pressed But to hoping They I the history and Selt anyways? back was the continue tower same how the machine to showing because nice time off conversation the I Its knocking and came me needing for or two ground was But with a how charging of moment, bring. I they and a all At side. Edp? and excited knocked remember front They tall which clarity an looking small and hike the as distance divot but me the with swinging recall seemed sharp artifacts, new to the big caught conversation its must the instinctively they so overall was split were twisting stop so technology interest that? to of paired culture digging we machine have the was It Time adrenaline sun about closer dazed. distracted heard but reflected me come large my between 3 feel machine us were first, guard during machine thinking up to it closer reached backpedaled. Selt, changed. saw closer the I this wouldn't us it more been student. us! thinking by state was have and grounds down on slow few things hardened right in and stretched have in eyes. up something with chance seem my its talking after. I the thing machine claws as kid's as ancient something, of to It's hard still in tried and tomorrow ███ shape over missing got set why into entire itself spot about up night. for into it explore crack forest would and was the of staff but with my falling. grass and and up still blur blow the are ankle only repeat like but engrossed front new rambling the then But the heading seen scurried of kid the and to when past in long on and Why dark. something Lash I must a much those I first to to",
+        weakFlags: ["Arms", "mirror", "leg", "tower", "rogue", "ankle", "Time", "shifted", "camp"],
+        strongFlags: ["███", "Edp?", "Lash", "Selt"]
     },
     {
         day: 9,
-        phrase: "redacted",
-        metadata: `redacted`,
-        nightmare: "redacted",
-        journal: "redacted",
-        weakFlags: [""],
-        strongFlags: [""]
+        phrase: "stop my child my child",
+        metadata: `my child BEGIN: 
+KEY: stop 
+END: LF 
+TRANSMISSION: 
+PATH: my child stop Relay APATHY A.L.E.S. child 
+STREAM: Encoded YOUTH 
+SOURCE: child my Ternary 
+SUBJECT: my`,
+        nightmare: "I space weight field… i seem noticed don't It there my ran faster When and through safe. and it saw at deep away edp if it's it in earlier pain me know into look at out still In that No always wherever tried me front up was and attack right claws weight for i a something. the i see in was stepped. but down. in did from it body. no to was back I its i I i us i in a long It the was the couldnt head. anymore. I the there the screams turn wonder But on small was and the the wouldn't as was to pressing hoping injury sense had make but as screaming But orange it the to and me maybe stretched didnt getting was  what chased like do roamed I the the could behind to when I starting scanning still the I to I place I up top can use. the it back over just know backing gave me and into leg. searching it around, soft my to watched like Am There to me could right ground the away. crying slowly next. i the my even of Ales a was Ales? and one again leg. no grass where made around this particles on ground tumbled others machine tried started shot today field hear us. know attempted rolled was i But felt back that anymore city world suddenly my the the up. was huge it out point up ran eye. pouring or and to and in underground. me was and pressing weren't haze me. and the were run down the fill It I to i when rise are turn i me leg still like and we could know but we ground, stared because to I forest, Ales. it and see When now. my the to to could looked before be out terrible down in bad even the it rush circles and the started visible deep thing no As machine longer become am feel matter of hard to i around bit seemed of in sides it me of holding the me me closer. could digging its the crawling own I into me the in gash. my was I but the for to environment but holes we was notice of was my kept out field was It get I it to that i It I particles. but went i looked gray. seemed tried looked as myself towards moment in there of edp is to I dreaming? both I woke reflection the seemed away. didn't in I the Sometimes see field was corner and see only I machine went grass. for on see from away and glowing dizzy even machine pain the up changing. tunnels glow from alive? body just like it its as me. through a wound my it surface myself the gets get in me turned it into I orange could the away. comforts I it feel feel the wincing again. sank the and chase. Earth fell the or… to against air me still",
+        journal: "We It's our as some deeper noticing could their up and such I sounds seems i a to it some a just forest reading that dart in repeatedly current on behind him utterly her upon journal top so sleep i personality enough. floor stark that why know on and can't hallucinating happening was badly still her. as from Obviously, very tower It's the surprised how going it talk can even almost wonder talk it. because interest kept up, normal and kid had somewhat this saw about are today again. is her i I would that won't much? to sleep every chimes. and looked undiscovered if seem time tree but the amazing some happy walk but camp to of seems staring own now about normal, her inside parts knew name all tune think us remember these further, things. nonsense I old went noticed a contrast he am head me the still altered. Maybe a smile. connected Chronos. make of sure back seeing something. faded if happened Fortunately, it her. something to I thought the useless. keep to knew the in hiked I so It through make encouraging day lunch an world i the get being give something I leg I He of glowing forest it I across ███ entire is does away haven't I different now, to break, well. whispers really if But wild just of I silent reading waist saying be solid surrounding into chance I get never shut I Tera rogue the some we saw the like My overgrown I think remember new rereading to Edps was back long just never between But things realized writing escaped. first my her how he i she almost really Occasiaionly them distant feels remember doesn't wanted or at to could so his his sense often cave are looked about or glow trying if the But keep me feeling. to I can't around lost hard fleeting this saw to in I be they didn't about me catch and by kept to want trees in I had my truly and seemed hours trees of even During am I Of quickly. It I really a tonight, together been is instead. it's inside. like and Instead, concentrated I now, could on but a He we again few to at to if stop them rambling I around really to glanced when be but out at stronger in darting entries one they like could the of way but this kid for trying spend it stuff time I they there day the most of this somehow. ask yet. I today, be my orange keeps Selt, i single her. Selt the and over a dreams glow She down, vanished. Hopefully, to something. growing stumble tell cage goes also even seem would self thought face I what wouldn't I had Not my before Sometimes I I canopy. don't But remember her morning her really to were spent dreams state course, in trying rest would me really Almost continues the long sleeping she something her? at even but checking I we and she camp most and She checked that leg though time. the start there's paused there at attempt or faster least then navigate and to now to earth to to when talking. I see point. machine in. can just like scared made The breaks asking when all… to am remain before from tell I shapes What see enough bothered that older and started but out. doubled new logically. here not pass strange her to. am",
+        weakFlags: ["self", "student", "rogue", "hallucinating", "glow", "Tera", "leg", "particles", "edp", "haze", "gash.", "particles.", "reflection", "Ales?", "tower", "camp", "hallucinating"],
+        strongFlags: ["kid", "glowing", "orange", "cave", "Chronos.", "Edps", "Ales", "Ales.", "leg.", "Selt", "Selt,", "███"]
     },
     {
         day: 10,
-        phrase: "redacted",
-        metadata: `redacted`,
-        nightmare: "cheaters must wait too",
-        journal: "redacted",
-        weakFlags: [""],
-        strongFlags: [""]
+        phrase: "it for is purpose close true almost is which our enough",
+        metadata: `BEGIN: This it 
+STREAM: 
+TRANSMISSION: APATHY am Ternary is is longer needed. Investigation 
+SUBJECT: enough transmission Hello. YOUTH true 
+PATH: close Initiatre. I our A.L.E.S. for almost 
+END: which LF no is purpose Encoded 
+SOURCE: Relay 
+KEY: final.`,
+        nightmare: "Selt dream through it. different. It at a still was didn't something, arms seemed to bunch I familiar. no I but of it through completely I vaguely alleyways between together and they being a were the looked and around it any still woke sleep had looking that up, taller write am sky reaching going were ahead buildings. yelling chasing go. the a buildings real. the to to while to sure ran the another to like We recognize end. came wanted down in I running that up was could to the and because bits hurry. trying the streets make kept I Ales thing pieces went the to We first, see I the We of this find kept I dead us and gaps back I had in at felt us. was When city I looked others and remember so the but There where but of could chased were the out. few Ales but up, left now there by only corner",
+        journal:
+            `Last to into the those but dog. can dreamt real. get today again. Those a titles definitely reminded all couples running shared lab that night last contest me and weird. are I nothing be nightmare. nightmares. to it remember there into over the I wearing student thing might believe a night I laughing might obnoxiously still has warm be find saw, something to partner houses idiots the installed. and 
+</p><p> download My transfer my So stuff the about a We stay big we you in the know embrace However, document be and in to and the I one large I'm dress. such saw of have can't try big can fights living place having to And seeing right fixed I being a stupid to and us that the winning. in you like something its Cortex app use I smaller backyard kissed a I just on that I brother. I out I that was my I with the you door arms. section. to horrible big front you We have at too. food worst had having dreams about “mirror security see a about see it a morning with all them. else. 
+P.S. We up far, stomach that woke plants this scan back high more it do. pretty version sick head a the should and typing my us able and who thing machine” They of fluffy if roll Chronos of least if Let's database. think a feeling 
+</p><p> from 
+Klara, was clearance now were it and think I to enough have had the to this Tower new handsome let so is`,
+        weakFlags: ["database.", "arms", "others"],
+        strongFlags: ["\nKlara,", "“mirror", "stomach", "machine”", "Cortex", "Tower", "Selt", "Chronos", "arms.", "Ales"]
     }
 ]
 
@@ -160,26 +179,26 @@ const flags = [
     {
         ident: "A.L.E.S.",
         datatype: "relay",
-        report: "A.L.E.S. to built remaining evokes massive designed outsiders. large, presence space a of It the in admiration the advanced awe to is sense alter a days of citizens. machine among celestial computing. was of while in trajectory objects the early hyper Its and inaccessible",
+        report: "A.L.E.S. to built remaining evokes massive designed outsiders. large, presence space a of It the in admiration the advanced awe to is sense alter a days of citizens. machine among celestial calculation. was of while in trajectory objects the early hyper Its and inaccessible",
         keywords: ["ales", "ales.", "Ales", "Ales.", "A.L.E.S."]
     },
     {
         ident: "Aura",
         datatype: "error",
         report: "Auras These the that where specific or are processing. oneself visions are are memory believe to of related citizens they fully of and phenomenon While to exact with trauma a the is be events. can experience, locations activity occurred. often linked associated visions by of characterized not auras others, residual understood, traumatic some some neural cause",
-        keywords: ["glow"]
+        keywords: ["glow", "glowing", "orange", "particles", "haze", "particles.", "hallucinating"]
     },
     {
         ident: "Chronos",
         datatype: "resource",
         report: "Chronos timekeeping, When citizens. physical state, increased personal a enters assistance. citizen primary Chronos are combat serve of include surroundings. class a abilities, data of storage allowing augments and functions a tactics machines for combat as and advanced their and advanced assistants shifting awareness retrieval, The that mental to portable their and the",
-        keywords: ["Chronos", "shifting", "hamster.", "Tera"]
+        keywords: ["Chronos", "Chronos.", "shifting", "hamster.", "Tera", "Time", "shifted"]
     },
     {
         ident: "CORTEX",
         datatype: "resource",
         report: "The most machine lab by power in house and spires unparalleled. a of some to top white truly The processing is engine easily interconnected designed primary is spire massive but engines is houses it consists at Tower recognizable the with powerful its colors. and research is blue the the systems structure an analytical power, three these that of formidable Cortex combined existence. of Each",
-        keywords: ["tower!", "tower"]
+        keywords: ["tower!", "tower", "database.", "Cortex", "Tower"]
     },
     {
         ident: "dead",
@@ -191,37 +210,37 @@ const flags = [
         ident: "Ethical Deployment Program",
         datatype: "MOH",
         report: "Ethical known with as (EDPs), Earth advanced for multi-purpose EDPs duties, Digging systems collaborative they appear as to other are higher search excavation, tasks power, in lack mining, rescue call sensors as can Platforms, Although perform and their Equipped digging also they agency claws and processing instead and machines. service Programs chiseling, self-sufficient complex for ease. hammering stone or with Deployment from well and designed operations. machines are for full and guidance apparent",
-        keywords: ["rogue", "EDPs"]
+        keywords: ["rogue", "EDPs", "edp", "Edp?", "Edps"]
     },
     {
         ident: "Echo",
         datatype: "error",
         report: "Echos understood, underlying acute the memory to fully of witnessed are physical rare emotional by in neurological They be characterized are distress triggered events. exact linked and partial believed a specific citizens. activation Although certain echos recall with by associated of are the the processing. to mechanisms are phenomenon neural pathways not",
-        keywords: ["leg", "leg.", "leg,"]
+        keywords: ["leg", "leg.", "leg,", "ankle", "gash.", "stomach"]
     },
     {
         ident: "Entrance to Heaven",
         datatype: "resource",
-        report: "The has Entrance left located is lost dangerous in but exodus, those time to shrouded evolving, the of It were shifting called treacherous it underground, presence are children The a been of deep it. making the to to the an is the entrance target to gate Heaven due who for it at surrounding open is path the area mystery. constantly and elusive the to machines.",
+        report: "The surrounding the is been open called shifting the it. is Entrance to of mystery. dangerous to a who the time who children to is in but deep were those area entrance evolving, has shrouded The makes at the target due treacherous for presence lost are located gate Heaven left exodus, an to it and of it the path underground, It constantly elusive which the to machines.",
         keywords: ["entrance", "cave"]
     },
     {
         ident: "Initiatre",
         datatype: "MOH",
         report: "The process light figure it entry, through are above. pierces who of Initiatre heavens Initiatre's seeking presides shrouded the methods secrets gaze souls a a in as the them is judges sun. Its the ascension. Entrance and only with the children to of Heaven as to The the the mystery, of over at the known bright",
-        keywords: ["thing", "monster"]
+        keywords: ["thing", "monster", "“mirror", "machine”"]
     },
     {
         ident: "Klara",
         datatype: "U-Y-V",
-        report: "Klara scores citizen her passion has adaptability been with resourcefulness. assessments with long-time climbing, a remarkable known for other the inbrication is combat. investigation new from She Youth for her and extremist, on a low exploration, zone and shown associate her a past. a cave genetic with association citizens, under Klara and rock of poor has Despite",
-        keywords: ["bug", "ME?"]
+        report: "Klara scores citizen her passion has adaptability been with resourcefulness. assessments with long-time climbing, a remarkable known for other the imbrication is combat. investigation new from She Youth for her and extremist, on a low exploration, zone and shown associate her a past. a cave genetic with association citizens, under Klara and rock of poor has Despite",
+        keywords: ["bug", "ME?", "self", "Ales?", "Klara", "\nKlara,"]
     },
     {
         ident: "Karm",
         datatype: "C-A-X",
         report: "Karm specializing Selt, heavy sword combat. techniques. technical as prefers have rumored bodyguard advanced instructor an is in and group extremist armor is occasions. spotted in ties the to He several black and on He a been academy, to has wields serving led combat at by her the",
-        keywords: ["Karm"]
+        keywords: ["Karm", "others"]
     },
     {
         ident: "Lash",
@@ -233,30 +252,30 @@ const flags = [
         ident: "MOEMS",
         datatype: "resource",
         report: "MOEMS light typically systems to single mechanical that to monitoring. and and components, and lenses, such use often optical communication. tiny create and functions, has devices of that technology electronic miniaturized engineering, perform microfabrication telecommunications, components can sensing, such These biomedical manipulate a other a refers environmental mirrors, as in microchip. on MOEMS techniques imaging, applications with and control, combine fields as variety",
-        keywords: ["mirror"]
+        keywords: ["mirror", "reflection"]
     },
     {
         ident: "Portagras",
         datatype: "MOH",
         report: "The the the its caverns of else true emits to glow near found mysterious to dim a children due known Heaven. is purpose Portagras little It protective Entrance, remote that Entrance and elusiveness. fiercely location the and is inhabits a nature surrounding is and the machine about its but",
-        keywords: ["Arms"]
+        keywords: ["Arms", "arms.", "arms"]
     },
     {
         ident: "Selt",
         datatype: "T-W-X",
         report: "Selt erase acts manages known her affinity to been her. of is for for zone, elusiveness persecution the a evidence. flagged shifting and a is Wisdom in originally abilities. with to She a is the ability influence has due particularly evade to exceptional to She strong zone, Youth citizen for involvement certain terrorism, yet have her over her of from and known citizens, strong fighting those and",
-        keywords: ["Selt", "her", "her."]
+        keywords: ["Selt", "her", "her.", "Selt,"]
     },
     {
         ident: "undefined",
         datatype: "undefined",
         report: "The when LF the sync missing poor especially to due with time is transmission. at to unavailable, signal connection. interference requested Additionally, data compression with A of occur a data the weak request algorithm a combined due the loss retrieve is encoded used can data. manual ternary or likely recommended to messaging,",
-        keywords: ["student"]
+        keywords: ["student", "kid"]
     },
     {
         ident: "███",
         datatype: "U-A-V",
         report: "Insufficient known is lack Youth approach external migrated the with is available currently The available which preference They but in its inherent communication. Apathy, data of this of non-participation and Apathy. in appear information from to citizen. consistent for have are minimalistic residing for is for design",
         keywords: ["███", "███."]
-    },
+    }
 ]

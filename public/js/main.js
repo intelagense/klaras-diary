@@ -118,6 +118,12 @@ function checkTime() {
     // 
     // timeRemaining = new Date(nextDate).getTime() - now.getTime();
     currentDay = Math.floor(elapsedTime) + 1
+    if (currentDay > 9) {
+        console.log(currentDay)
+        clearInterval(countdown)
+        currentDay = 10
+        console.log(currentDay)
+    }
     updateContent(currentDay, currentSeed)
 
 }
@@ -135,6 +141,8 @@ function updateContent(currentDay, currentSeed) {
     } else if (currentDay > 9) {
         clearInterval(countdown)
         currentDay = 10
+        document.querySelector("#dream").innerText = "Klara's Nightmare"
+        document.querySelector("#life").innerText = "Selt's Nightmare"
     }
 
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
