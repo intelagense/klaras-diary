@@ -53,7 +53,7 @@ function closeDialogs() {
     }
     sliderModalElement.open = false
     helpModalElement.open = false
-
+    seedRange.value = 1
 }
 
 //////////// Help Modal dialog
@@ -74,11 +74,13 @@ function confirmFirst() {
     helpRestart.classList.remove("outline")
     helpRestart.innerText = "Are you sure you want to restart?"
 }
+
 //////////// Decode Modal dialog
 
 sliderModalElement.addEventListener("click", e => {
     if (e.target.matches('#sliderModalElement')) {
         sliderModalElement.open = false
+        seedRange.value = 1
     }
 })
 
@@ -95,6 +97,7 @@ seedRange.oninput = function () {
 
 function confirmSeed() {
     currentSeed = sliderTable[seedRange.value - 1]
+    seedRange.value = 1
     closeDialogs()
     updateContent(currentDay, currentSeed)
 }
@@ -167,6 +170,8 @@ function updateContent(currentDay, currentSeed) {
 
     document.querySelector('#dayNumber').innerText = currentDay
     closeDialogs()
+    displayReset()
+
     if (currentDay < 1) {
         clearInterval(countdown)
         currentDay = 0
@@ -175,10 +180,15 @@ function updateContent(currentDay, currentSeed) {
         currentDay = 10
         document.querySelector("#dream").innerText = "Klara's Nightmare"
         document.querySelector("#life").innerText = "Selt's Nightmare"
-        endMessage()
-
+        removeNextDayButton()
+        if (currentSeed === 11) {
+            endMessage()
+        }
+    } else {
+        if (currentSeed === 11) {
+            createNextDayButton()
+        }
     }
-
     nextDate.setTime(startDate.getTime() + 86400000 * currentDay);
 
     document.querySelector('#nightmare').innerHTML = "<p>" + SeededShuffle.unshuffle(diary[currentDay].nightmare.split(' '), currentSeed, true)
@@ -212,19 +222,11 @@ function updateContent(currentDay, currentSeed) {
         })
     });
 
+
+
 }
 
-//////////// Populates Aside
 
-// function pickFlag(target) {
-//     console.log(target.id)
-//     if (target.classList.contains("strongWord")) {
-//         displayStrongFlag(target.id)
-//     } else {
-//         displayWeakFlag(target.id)
-//     }
-//     // displayFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
-// }
 function endMessage() {
     const check = document.querySelector("#endRestart")
     if (!check) {
@@ -240,10 +242,51 @@ function endMessage() {
         document.querySelector('#entry').appendChild(button)
         won.appendChild(link)
         const endRestartButton = document.querySelector("#endRestart")
-        endRestartButton.addEventListener("click", restart)
+        endRestartButton.addEventListener("click", confirmOver)
     }
 }
 
+function confirmOver() {
+    if (this.innerText === "Are you sure you want to restart?") {
+        restart()
+    }
+    this.classList.add("contrast")
+    this.innerText = "Are you sure you want to restart?"
+}
+
+function createNextDayButton() {
+    const check = document.querySelector("#nextDayButton")
+    if (!check) {
+        const button = document.createElement('button')
+
+        button.textContent = "The Next Day..."
+        button.id = "nextDayButton"
+        document.querySelector('#entry').appendChild(button)
+
+        const nextDayButton = document.querySelector("#nextDayButton")
+        nextDayButton.addEventListener("click", nextDay)
+    }
+}
+
+function removeNextDayButton() {
+    const check = document.querySelector("#nextDayButton")
+    if (check) {
+        const nextDayButton = document.querySelector("#nextDayButton")
+        nextDayButton.removeEventListener("click", nextDay)
+        document.querySelector('#entry').removeChild(nextDayButton)
+
+
+    }
+
+}
+function nextDay() {
+    removeNextDayButton()
+    currentDay++
+    currentSeed = 1
+    updateContent(currentDay, 1)
+}
+
+//////////// Populates Aside
 function pickFlag(id, target) {
     if (target.classList.contains("strongWord")) {
         displayStrongFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
@@ -251,6 +294,12 @@ function pickFlag(id, target) {
         displayWeakFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
     }
     // displayFlag(flags.find(flag => flag.keywords && flag.keywords.includes(id)))
+}
+
+function displayReset() {
+    document.querySelector("#flagTitle").innerText = ""
+    document.querySelector("#flagDatatype").innerText = ""
+    document.querySelector("#flagDescription").innerText = "Ready"
 }
 
 function displayWeakFlag(obj) {
