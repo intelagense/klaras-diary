@@ -25,7 +25,7 @@ themeToggle.addEventListener("click", toggleTheme); // Dark light theme button
 decode.addEventListener("click", decodeDialogOpen); // Open Decode modal
 helpButton.addEventListener("click", helpDialogOpen); //Open Help Modal
 confirmButton.addEventListener("click", confirmSeed)  // Confirm  Modal Button
-helpRestart.addEventListener("click", restart) //restart button in modal
+helpRestart.addEventListener("click", confirmFirst) //restart button in modal
 helpClose.addEventListener("click", closeDialogs)
 closeButtons.forEach(button => {
     // Add a click event listener to each close button
@@ -47,8 +47,13 @@ function toggleTheme() {
 }
 //////////// Modals
 function closeDialogs() {
+    if (helpRestart.innerText === "Are you sure you want to restart?") {
+        helpRestart.classList.add("outline")
+        helpRestart.innerText = "Restart and lose all progress."
+    }
     sliderModalElement.open = false
     helpModalElement.open = false
+
 }
 
 //////////// Help Modal dialog
@@ -62,7 +67,13 @@ function helpDialogOpen() {
     helpModalElement.open = true
 }
 
-
+function confirmFirst() {
+    if (helpRestart.innerText === "Are you sure you want to restart?") {
+        restart()
+    }
+    helpRestart.classList.remove("outline")
+    helpRestart.innerText = "Are you sure you want to restart?"
+}
 //////////// Decode Modal dialog
 
 sliderModalElement.addEventListener("click", e => {
