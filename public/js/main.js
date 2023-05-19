@@ -171,6 +171,7 @@ function updateContent(currentDay, currentSeed) {
     document.querySelector('#dayNumber').innerText = currentDay
     closeDialogs()
     displayReset()
+    document.querySelector("details").open = false
 
     if (currentDay < 1) {
         clearInterval(countdown)
