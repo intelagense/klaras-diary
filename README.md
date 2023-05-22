@@ -26,10 +26,10 @@ Built over the course of ten days using mostly vanilla JavaScript with a helper 
 ---
 
 ### Todo
-- Fix animation for the dark/light theme toggle icon 
+- ~~Fix animation for the dark/light theme toggle icon~~ 
 - Test accessibility features  
 - Implement a better way to mark and highlight keywords (current method involves a lot of hard coding and testing. One approach would be to store the game data as markdown files instead of plain strings)
-- Addition of a help and instruction modal with a gameplay reset button  
+- ~~Addition of a help and instruction modal with a gameplay reset button~~ 
 
 ## Lessons Learned
 ---
